@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.35027.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingRequestPublisher", "TrainingRequestPublisher.csproj", "{B7051D24-EF52-4924-B6AA-F7901FB42735}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateProgressFunction", "..\UpdateProgressFunction\UpdateProgressFunction.csproj", "{1804AD29-4610-406D-8191-912904D68841}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B7051D24-EF52-4924-B6AA-F7901FB42735}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7051D24-EF52-4924-B6AA-F7901FB42735}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7051D24-EF52-4924-B6AA-F7901FB42735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1804AD29-4610-406D-8191-912904D68841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1804AD29-4610-406D-8191-912904D68841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1804AD29-4610-406D-8191-912904D68841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1804AD29-4610-406D-8191-912904D68841}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

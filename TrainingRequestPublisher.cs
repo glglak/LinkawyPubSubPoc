@@ -19,7 +19,7 @@ namespace TrainingRequestPublisher
 
         private static readonly string ServiceBusConnectionString = Environment.GetEnvironmentVariable("ServiceBusConnectionString");
         private static readonly string TopicName = Environment.GetEnvironmentVariable("TopicName");
-        private static readonly IQueueClient queueClient = new QueueClient(ServiceBusConnectionString, TopicName);
+        private static readonly ITopicClient topicClient = new TopicClient(ServiceBusConnectionString, TopicName);
  
 
         [FunctionName("TrainingRequestPublisher")]
@@ -44,7 +44,7 @@ namespace TrainingRequestPublisher
 
                 var messageBody = JsonConvert.SerializeObject(trainingRequest);
                 var message = new Message(Encoding.UTF8.GetBytes(messageBody));
-                await queueClient.SendAsync(message);
+                await topicClient.SendAsync(message);
 
                 log.LogInformation($"Published training request update: {trainingRequest.RequestID}");
             }
@@ -56,7 +56,7 @@ namespace TrainingRequestPublisher
             public int EmployeeID { get; set; }
             public int CourseID { get; set; }
             public string Status { get; set; }
-            public string Progress { get; set; }
+            public decimal Progress { get; set; }  
             public DateTime CreatedAt { get; set; }
             public DateTime UpdatedAt { get; set; }
         }
